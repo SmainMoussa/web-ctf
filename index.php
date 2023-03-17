@@ -2,14 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Login Page</title>
   </head>
   <body>
     <?php
       $servername = "localhost";
-      $username = "your_username";
-      $password = "your_password";
-      $database = "your_database_name";
+      $username = "root";
+      $password = "";
+      $database = "web-ctf";
 
       // Create connection
       $conn = new mysqli($servername, $username, $password, $database);
@@ -40,6 +41,8 @@
       // Close the database connection
       $conn->close();
     ?>
+    <div class="login-box">
+    <h1>Login to CTFs</h1>
     <form method="post">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username"><br><br>
@@ -47,5 +50,6 @@
       <input type="password" id="password" name="password"><br><br>
       <input type="submit" value="Login">
     </form>
+    </div>
   </body>
 </html>
